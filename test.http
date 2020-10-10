@@ -1,0 +1,76 @@
+POST http://127.0.0.1:8000/api/accounts/signup HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Bob Smith",
+  "email": "bob@gmail.com",
+  "password": "password",
+  "password2": "password"
+}
+
+###
+POST http://127.0.0.1:8000/api/token/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "email":"bob@gmail.com",
+  "password": "password"
+}
+
+###
+POST http://127.0.0.1:8000/api/token/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "email":"root@gmail.com",
+  "password": "root123"
+}
+
+###
+GET http://127.0.0.1:8000/api/realtors/ HTTP/1.1
+
+
+###
+GET http://127.0.0.1:8000/api/realtors/topseller HTTP/1.1
+
+
+###
+GET http://127.0.0.1:8000/api/realtors/1 HTTP/1.1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAxNzE1NTkzLCJqdGkiOiJmY2FkNjQyZmQxMGM0YzUwODE1NDcwOTU4Y2E0YjBkNyIsInVzZXJfaWQiOjF9.-zLkf3IQHmLLD8LJFgaoGku0J-RpyZXlNxjlLReDMhw
+
+###
+GET http://127.0.0.1:8000/api/listings/ HTTP/1.1
+
+###
+GET http://127.0.0.1:8000/api/listings/3158-Main-Street-Bellevue-Washington HTTP/1.1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAyMTM5NTM3LCJqdGkiOiI5YWY4ODUwZmU2N2E0MTcyODcwMGMyOWM3MmExNjRlZiIsInVzZXJfaWQiOjF9.R2ATH6ZCaI6i5nuvTF9Wc1RzrO0W4iYFXzTqR772qMs
+
+###
+
+POST http://127.0.0.1:8000/api/listings/search HTTP/1.1
+Content-Type: application/json
+
+{
+  "sale_type": "For Sale",
+  "price": "$400,000+",
+  "bedrooms": "3+",
+  "home_type": "House",
+  "bathrooms": "2+",
+  "sqft": "1000+",
+  "days_listed": "5 or less",
+  "has_photos": "3+",
+  "open_house": false,
+  "keywords": ""
+}
+
+###
+POST http://127.0.0.1:8000/api/contacts/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Thomas Anderson1",
+  "email": "asdfllzxcv@163.com",
+  "subject": "Looking to buy a home",
+  "message": "Hello World"
+}
+
